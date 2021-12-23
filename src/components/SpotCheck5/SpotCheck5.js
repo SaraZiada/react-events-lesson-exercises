@@ -28,7 +28,7 @@ class SpotCheck5 extends Component {
   render() {
     return (
       <div>
-        {this.state.tasks.filter(t => t.complete === false).map(t => <Task task={t} markComplete={this.markComplete}/>)}
+        {this.state.tasks.filter(t => t.complete === false).map(t => <Task key={t.text} task={t} markComplete={this.markComplete}/>)}
       </div>
     )
   }
